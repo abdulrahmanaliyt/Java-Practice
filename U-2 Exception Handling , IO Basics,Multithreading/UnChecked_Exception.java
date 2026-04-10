@@ -3,7 +3,7 @@ class UnChecked_Exception
 {
 	public static void myMethod( ) //throws IOException
 	{
-		throw new NumberFormatException( );
+		throw new NumberFormatException( ); //UnChecked Exception
 		//throw new IOException( );  //Checked Exception
 	}
 	public static void main (String args [ ] ) //throws IOException
