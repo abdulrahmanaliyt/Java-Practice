@@ -1,0 +1,28 @@
+//Enter two value while executing 
+
+class Exception_Handling_Using_finally_block
+{
+	public static void main (String [ ] args )
+	{
+		int result = 0;
+		try
+		{
+			int dividend = Integer.parseInt(args[0]);
+			int divisor = Integer.parseInt(args[1]);
+			result = dividend / divisor;
+		}
+		catch(ArithmeticException ae)
+		{
+			System.out.println("The second command line argument can't be zero!");
+		}
+		catch(ArrayIndexOutOfBoundsException aioobe)
+		{
+			System.out.println("Please input both dividend as well as divisor!");
+		}
+		finally 
+		{
+			System.out.println("Releasing Resources!");
+		}
+		System.out.println("Result = "+result);
+	}
+}
