@@ -1,0 +1,60 @@
+## 1. Generics in Java
+Before diving into collections, you must understand Generics. They allow classes, interfaces, and methods to take types (like Integer, String) as parameters.
+
+Purpose: Provides Type Safety (detects errors at compile time rather than runtime) and eliminates the need for manual typecasting.
+
+Wildcards (?): Used when the type is unknown.
+
+<? extends T>: Upper bound (accepts T or its subclasses).
+
+<? super T>: Lower bound (accepts T or its superclasses).
+
+## 2. The Collection Hierarchy
+The Java Collection Framework is a set of classes and interfaces located in the java.util package.
+
+### Key Interfaces & Classes:
+Interface                           Characteristics                 Common Implementation Classes
+
+List	        Ordered, allows duplicates, index-based access.	    ArrayList, LinkedList, Vector, Stack
+Set	            Unordered, no duplicates allowed.	                HashSet, LinkedHashSet, TreeSet (Sorted)
+Queue	        FIFO (First-In-First-Out) order.	                PriorityQueue, LinkedList
+Map	            Key-Value pairs, unique keys.                       HashMap, LinkedHashMap, TreeMap
+                (Note: Map doesn't extend Collection)	
+
+## 3. Important Implementation Classes (Exam Favorites)
+ArrayList vs. LinkedList: * ArrayList is better for storing and accessing data (random access).
+
+LinkedList is better for manipulating data (frequent insertion/deletion).
+
+HashSet vs. TreeSet: * HashSet uses hashing; it's faster but has no order.
+
+TreeSet stores elements in a sorted (natural) order.
+
+HashMap: Uses a hash table to store data. It allows one null key and multiple null values.
+
+## 4. Cursors (Iterating over Collections)
+To retrieve elements one by one, Java provides three cursors:
+
+Iterator: Universal cursor; can be used for any Collection. Supports remove().
+
+ListIterator: Only for List objects. Can move both forward and backward.
+
+Enumeration: Legacy cursor; only for legacy classes like Vector or Stack.
+
+## 5. Comparison: Comparable vs. Comparator
+AKTU often asks for the difference between these two for sorting:
+
+Comparable: Used for Natural Sorting (e.g., numbers in ascending order). Implements compareTo() method.
+
+Comparator: Used for Custom Sorting (e.g., sorting students by name then by roll number). Implements compare() method.
+
+### Quick Revision Checklist for Exams:
+[ ] Explain the need for the Collection Framework.
+
+[ ] Draw the JCF hierarchy diagram.
+
+[ ] Difference between ArrayList and Vector (Vector is synchronized/thread-safe).
+
+[ ] Difference between HashMap and Hashtable.
+
+[ ] Write a small program using ArrayList and Iterator.
