@@ -1,0 +1,55 @@
+## Unit 3 Summary: Java New Features & Stream API
+### 1. Lambda Expressions
+Lambda expressions are a key feature of Java 8 that allow you to treat functionality as a method argument, or code as data. It provides a clear and concise way to represent one method interface using an expression.
+
+Syntax: (parameters) -> { body }
+
+Purpose: To provide the implementation of an interface which has functional interface.
+
+### 2. Functional Interfaces
+An interface that contains exactly one abstract method is known as a functional interface. It can have any number of default or static methods.
+
+Annotation: @FunctionalInterface is used to ensure the interface doesn't violate the rules.
+
+Common Examples: Predicate, Runnable, Callable, and Consumer.
+
+### 3. Method References
+Method references are a shorthand notation of a lambda expression to call a method. They improve code readability.
+
+Types:
+
+Static methods (Class::staticMethodName)
+
+Instance methods of a particular object (obj::instanceMethodName)
+
+Constructors (ClassName::new)
+
+### 4. Default and Static Methods in Interfaces
+Before Java 8, interfaces could only have abstract methods.
+
+Default Methods: Allow you to add new functionality to interfaces without breaking the classes that implement them. Use the default keyword.
+
+Static Methods: Similar to class static methods; they belong to the interface and can be called without an object.
+
+### 5. Java Stream API
+The java.util.stream package is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
+
+Key Operations:
+
+Intermediate: filter(), map(), sorted() (These return a new stream).
+
+Terminal: collect(), forEach(), reduce() (These return a result or void).
+
+### 6. Optional Class & Base64
+Optional Class: A container object used to contain not-null objects to avoid NullPointerException.
+
+Base64: Java now provides a built-in class for Base64 encoding and decoding, which is essential for data transmission.
+
+### Important Topics for Exams
+Difference between Default and Static methods in interfaces.
+
+Internal vs. External Iteration in Streams.
+
+Diamond Syntax with Anonymous Inner Classes (Java 9 feature).
+
+The Modules System (Project Jigsaw): Brief understanding of module-info.java.
