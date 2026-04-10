@@ -1,0 +1,54 @@
+## 1. Spring Framework Core Concepts
+The Spring Framework is often called a "Framework of Frameworks" because it provides support for various technologies like Hibernate, Struts, and JSF.
+
+### A. Inversion of Control (IoC)
+Traditionally, a programmer creates objects using the new keyword. In Spring, the IoC Container takes over this responsibility. It creates, configures, and manages the entire lifecycle of objects (called Beans).
+    IoC Containers: BeanFactory (Basic) and ApplicationContext (Advanced/Modern).
+
+### B. Dependency Injection (DI)
+DI is the design pattern used to achieve IoC. Instead of a class creating its own dependencies, the Spring container "injects" them.
+
+    Types of DI:
+
+    . Setter Injection: Uses setter methods to provide dependencies.
+
+    . Constructor Injection: Uses the class constructor (Recommended for mandatory dependencies).
+
+### C. Aspect-Oriented Programming (AOP)
+AOP allows you to separate "cross-cutting concerns" (tasks that happen across the whole app, like logging, security, and transaction management) from your main business logic.
+    . Key Terms: Aspect, Advice, Join Point, and Pointcut.
+
+## 2. Spring Bean Lifecycle & Scopes
+A Bean is simply an object managed by Spring.
+
+Bean Scopes:
+
+singleton (Default): Only one instance per Spring container.
+
+prototype: A new instance is created every time it is requested.
+
+request/session: Used in web applications.
+
+Autowiring: Use the @Autowired annotation to let Spring automatically resolve and inject collaborating beans into your class.
+
+## 3. Spring Boot: The Modern Way
+Spring Boot is an extension of the Spring framework that eliminates the "Boilerplate code" and complex XML configurations.
+
+Key Features:
+
+Auto-configuration: Automatically configures your app based on the dependencies you add.
+
+Embedded Servers: Comes with built-in servers like Tomcat or Jetty (no need to install an external server).
+
+Starter Dependencies: Simplifies your Maven/Gradle configuration (e.g., spring-boot-starter-web).
+
+## 4. RESTful Web Services
+Unit 5 also covers building APIs using Spring Boot.
+
+Important Annotations:
+
+@RestController: Marks the class as a web request handler.
+
+@RequestMapping: Maps HTTP requests to specific handler methods.
+
+@GetMapping, @PostMapping, @PutMapping, @DeleteMapping: Define the type of HTTP operation.
