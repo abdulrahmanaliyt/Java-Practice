@@ -1,0 +1,77 @@
+## 1. Exception Handling
+Exception handling is a mechanism to handle runtime errors (like dividing by zero or missing files) so the program doesn't crash.
+
+### The Hierarchy
+All exception classes are subtypes of the java.lang.Throwable class.
+
+Error: Serious problems that a program should not try to catch (e.g., OutOfMemoryError).
+
+Exception: Conditions that a program should catch.
+
+Checked Exceptions: Checked at compile-time (e.g., IOException, SQLException).
+
+Unchecked Exceptions: Checked at runtime (e.g., ArithmeticException, NullPointerException).
+
+### Five Keywords
+try: Block of code where exceptions might occur.
+
+catch: Block that handles the specific exception.
+
+finally: Block that always executes, used for cleanup (like closing files).
+
+throw: Used to explicitly throw an exception.
+
+throws: Used in method signatures to declare that a method might throw an exception.
+
+## 2. Java I/O Basics (Input/Output)
+Java uses the concept of Streams to handle I/O operations. A stream is a sequence of data.
+
+### Types of Streams
+Byte Streams: Handle data in bytes (8-bit). Used for binary files like images.
+
+Classes: FileInputStream, FileOutputStream.
+
+Character Streams: Handle data in characters (16-bit Unicode). Used for text files.
+
+Classes: FileReader, FileWriter.
+
+### Buffering for Efficiency
+Reading data byte-by-byte is slow. Java provides Buffered Streams (BufferedReader, BufferedWriter) that store data in a buffer (temporary memory) to make I/O operations much faster.
+
+## 3. Multithreading
+Multithreading allows a program to perform multiple tasks concurrently within a single process.
+
+### Creating a Thread
+There are two ways to create a thread in Java:
+
+By extending the Thread class: Simple, but you can't inherit any other class.
+
+By implementing the Runnable interface: Better practice, allows your class to inherit other classes.
+
+### Thread Life Cycle
+A thread always exists in one of these states:
+
+New: Born but not started.
+
+Runnable: Ready to run (waiting for CPU time).
+
+Running: Currently executing.
+
+Blocked/Waiting: Waiting for a resource or another thread.
+
+Terminated: Finished execution.
+
+### Synchronization & Inter-thread Communication
+Synchronization: Prevents "thread interference" by allowing only one thread to access a shared resource at a time (using the synchronized keyword).
+
+Communication: Threads talk to each other using wait(), notify(), and notifyAll() methods (all defined in the Object class).
+
+### Quick Exam Revision Table
+
+Topic	            High-Priority Question
+
+Exception	   ->   Difference between throw and throws.
+Exception	   ->   Difference between Checked and Unchecked Exceptions.
+I/O	           ->   Difference between Byte Stream and Character Stream.
+Threads	       ->   Explain Thread Life Cycle with a diagram.
+Threads	       ->   Why use Runnable interface instead of Thread class?
