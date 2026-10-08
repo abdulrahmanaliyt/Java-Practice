@@ -10,7 +10,7 @@ class Input {
         int id = Integer.parseInt(br.readLine());
 
         System.out.println("Enter Sex(M/F): ");
-        char sex = (char) br.read();
+        char sex = (char) br.read(); // Read M/F char and when user presses enter, it will leave a newline character \n in the buffer so we need to consume it before reading the next line. 
 
         System.out.println("Enter Name: ");
         br.readLine(); // Consume the newline character left by previous
